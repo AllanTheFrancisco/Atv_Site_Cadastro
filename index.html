@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Agente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Alistar-se</h2>
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+            <span class="erro" id="erroNome"></span>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="agente@valorant.com">
+            <span class="erro" id="erroEmail"></span>
+
+            <label for="senha">Senha:</label>
+            <div class="campo-senha">
+                <input type="password" id="senha" placeholder="Mínimo 8 caracteres">
+                <span class="olho" onclick="toggleSenha('senha')">👁️</span>
+            </div>
+            <span class="erro" id="erroSenha"></span>
+
+            <button type="submit">Cadastrar</button>
+            <p style="margin-top: 15px;"><a href="login.html">Já tem uma conta? Faça Login</a></p>
+        </form>
+        <p id="mensagemSucesso" class="sucesso"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

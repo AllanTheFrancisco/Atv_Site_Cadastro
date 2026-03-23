@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.container {
+    background: rgba(15, 25, 35, 0.9); 
+    padding: 30px 20px; 
+    border-top: 3px solid #ff4655; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); 
+    width: 320px; 
+    text-align: center; 
+    color: #ece8e1; 
+}
+
+h2 {
+    color: #ff4655; 
+    margin-bottom: 25px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+.container p {
+    color: #ece8e1;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-left: 12.5%; 
+    font-size: 13px;
+    color: #ece8e1;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+input {
+    width: 75%; 
+    padding: 10px; 
+    margin: 5px 0; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 1px solid #5c5c5c; 
+    color: #ece8e1;
+    border-radius: 0; 
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff4655; 
+}
+
+button {
+    width: 75%; 
+    padding: 12px; 
+    background-color: #ff4655; 
+    color: white; 
+    border: 1px solid #ff4655; 
+    border-radius: 0; 
+    cursor: pointer; 
+    margin-top: 15px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent; 
+    color: #ff4655;
+}
+
+.erro {
+    color: #ff4655; 
+    font-size: 12px; 
+    height: 15px; 
+    display: block; 
+}
+
+.sucesso {
+   color: #00ff00; 
+   margin-top: 10px; 
+   font-weight: bold;
+}
+
+/* Ajustes no Layout do Botão Mostrar Senha */
+.campo-senha {
+    position: relative;
+    width: 75%; 
+    margin: 0 auto; 
+}
+
+.campo-senha input {
+    width: 100%; 
+    padding-right: 35px; 
+}
+
+.olho {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    filter: grayscale(100%) brightness(200%); 
+    transition: transform 0.2s;
+}
+
+.olho:hover {
+    transform: translateY(-50%) scale(1.2); 
+}
+
+a {
+    color: #ece8e1;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff4655;
+}

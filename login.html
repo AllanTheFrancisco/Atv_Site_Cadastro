@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Protocolo Valorant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Autenticação</h2>
+        <form id="loginForm">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Insira seu e-mail">
+            <span class="erro" id="erroEmail"></span>
+
+            <label for="senha">Senha:</label>
+            <div class="campo-senha">
+                <input type="password" id="senha" placeholder="Insira sua senha">
+                <span class="olho" onclick="toggleSenha('senha')">👁️</span>
+            </div>
+            <span class="erro" id="erroSenha"></span>
+
+            <button type="submit">Entrar</button>
+            <p style="margin-top: 15px;"><a href="redefinir.html">Esqueci minha senha</a></p>
+        </form>
+
+        <p id="mensagemErro" class="erro"></p>
+        <p id="mensagemSucesso" class="sucesso"></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

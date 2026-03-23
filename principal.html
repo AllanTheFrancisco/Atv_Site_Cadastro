@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Operações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Base de Operações</h2>
+        <p id="boasVindas">Agente conectado ao sistema central.</p>
+        
+        <div style="text-align: left; margin-bottom: 20px; color: #ece8e1;">
+            <p><strong>Nome:</strong> <span id="infoNome"></span></p>
+            <p><strong>E-mail:</strong> <span id="infoEmail"></span></p>
+        </div>
+
+        <button id="logout">Desconectar</button>   
+    </div>
+
+    <script>
+        let usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+        if (!usuarioLogado) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("boasVindas").textContent = `Bem-vindo(a), Agente ${usuarioLogado.nome}!`;
+            document.getElementById("infoNome").textContent = usuarioLogado.nome;
+            document.getElementById("infoEmail").textContent = usuarioLogado.email;
+        }
+
+        document.getElementById("logout").addEventListener("click", function() {
+            localStorage.removeItem("usuarioLogado");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
